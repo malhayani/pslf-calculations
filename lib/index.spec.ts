@@ -1,6 +1,6 @@
 import { PSLFCalculator } from '.';
 import {
-  AgiYearInformation,
+  IncomePlanInformation,
   FilingStatus,
   LoanTypes,
   UserInformation,
@@ -25,7 +25,7 @@ describe('PSLFCalculator tests', () => {
       totalLoanBalance: 5000,
     },
   ];
-  const mockIncomePlan = (new Array(25) as AgiYearInformation[]).fill({
+  const mockIncomePlan = (new Array(25) as IncomePlanInformation[]).fill({
     year: 1,
     familySize: 2,
     agi: 10000,
@@ -78,10 +78,10 @@ describe('PSLFCalculator tests', () => {
   it('Should fail to instantiate PSLFCalculator object', () => {
     expect(
       () => new PSLFCalculator(
-          {} as UserInformation,
-          mockLoanInformation,
-          mockIncomePlan,
-          FilingStatus.jointly,
+        {} as UserInformation,
+        mockLoanInformation,
+        mockIncomePlan,
+        FilingStatus.jointly,
       ),
     ).toThrow(Error);
   });

@@ -4,7 +4,7 @@ import {
   validateFilingStatus,
   validateLoanInformation,
 } from '.';
-import { AgiYearInformation, FilingStatus, UserInformation } from '../types';
+import { IncomePlanInformation, FilingStatus, UserInformation } from '../types';
 
 describe('Utils - validateUserInformation tests', () => {
   it('validateUserInformation should succeed', () => {
@@ -120,7 +120,7 @@ describe('Utils - validateUserInformation tests', () => {
 
 describe('Utils - validateIncomePlan tests', () => {
   it('validateIncomePlan should succeed', () => {
-    const mockIncomePlan = (new Array(25) as AgiYearInformation[]).fill({
+    const mockIncomePlan = (new Array(25) as IncomePlanInformation[]).fill({
       year: 1,
       familySize: 2,
       agi: 1000,
@@ -131,7 +131,7 @@ describe('Utils - validateIncomePlan tests', () => {
   });
 
   it('validateIncomePlan should fail because not enough income information', () => {
-    const mockIncomePlan = (new Array(20) as AgiYearInformation[]).fill({
+    const mockIncomePlan = (new Array(20) as IncomePlanInformation[]).fill({
       year: 1,
       familySize: 2,
       agi: 1000,
@@ -141,7 +141,7 @@ describe('Utils - validateIncomePlan tests', () => {
   });
 
   it('validateIncomePlan should fail because invalid income information', () => {
-    const mockIncomePlan = (new Array(25) as AgiYearInformation[]).fill({
+    const mockIncomePlan = (new Array(25) as IncomePlanInformation[]).fill({
       year: 1,
       familySize: 2,
       agi: 1000,
@@ -153,7 +153,7 @@ describe('Utils - validateIncomePlan tests', () => {
   });
 
   it('validateIncomePlan should fail because invalid income data type', () => {
-    const mockIncomePlan = (new Array(25) as AgiYearInformation[]).fill({
+    const mockIncomePlan = (new Array(25) as IncomePlanInformation[]).fill({
       year: 1,
       familySize: 2,
       agi: 1000,
@@ -165,7 +165,7 @@ describe('Utils - validateIncomePlan tests', () => {
   });
 
   it('validateIncomePlan should fail because invalid spouse income information', () => {
-    const mockIncomePlan = (new Array(25) as AgiYearInformation[]).fill({
+    const mockIncomePlan = (new Array(25) as IncomePlanInformation[]).fill({
       year: 1,
       familySize: 2,
       agi: 1000,

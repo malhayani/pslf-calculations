@@ -1,7 +1,7 @@
 {
-  "name": "finance-calculations",
+  "name": "pslf-calculations",
   "version": "1.0.0",
-  "description": "Finance calculations for the student loan forgiveness program",
+  "description": "PSLF calculations for the student loan forgiveness program",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf ./coverage",
@@ -16,6 +16,10 @@
     "test": "npm run format:fix && npm run eslint:fix && npm run jest"
   },
   "author": "Marlena Alhayani",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhansen2710/pslfCalculations"
+  },
   "license": "ISC",
   "dependencies": {
     "typescript": "^4.1.2"

@@ -1,5 +1,5 @@
 import {
-  AgiYearInformation,
+  IncomePlanInformation,
   UserInformation,
   FilingStatus,
   LoanInformation,
@@ -49,7 +49,7 @@ export const validateUserInformation = (userInformation: UserInformation) => {
 };
 
 export const validateIncomePlan = (
-  incomePlan: AgiYearInformation[],
+  incomePlan: IncomePlanInformation[],
   isMarried: boolean,
 ) => {
   if (incomePlan.length < 25) {

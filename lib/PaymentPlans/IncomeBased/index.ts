@@ -1,6 +1,6 @@
 import { TotalLoans } from '../../TotalLoans';
 import { PaymentPlan } from '../index';
-import { AgiYearInformation, UserInformation, FilingStatus } from '../../types';
+import { IncomePlanInformation, UserInformation, FilingStatus } from '../../types';
 
 export class IncomeBasedPaymentPlan extends PaymentPlan {
   private _filingStatus: FilingStatus;
@@ -9,7 +9,7 @@ export class IncomeBasedPaymentPlan extends PaymentPlan {
 
   private _compareToStandard: boolean;
 
-  private _incomePlan: AgiYearInformation[];
+  private _incomePlan: IncomePlanInformation[];
 
   private _standardPayments: number[];
 
@@ -19,7 +19,7 @@ export class IncomeBasedPaymentPlan extends PaymentPlan {
     filingStatus: FilingStatus,
     multiplier: number,
     compareToStandard: boolean,
-    incomePlan: AgiYearInformation[],
+    incomePlan: IncomePlanInformation[],
     standardPayments: number[],
   ) {
     super(userInformation, totalLoanInfo);
@@ -39,7 +39,7 @@ export class IncomeBasedPaymentPlan extends PaymentPlan {
       const povertyCalc = super.povertyGuideline + (year.familySize - 1) * super.povertyPerPerson;
       const principalCalc = this._filingStatus === FilingStatus.jointly
         ? super.totalLoanInfo.principal
-            / (super.totalLoanInfo.principal + super.userInformation.spouseLoans)
+        / (super.totalLoanInfo.principal + super.userInformation.spouseLoans)
         : 1;
       let payment = ((this._multiplier * (incomeCalc - 1.5 * povertyCalc)) / 12)
         * principalCalc;

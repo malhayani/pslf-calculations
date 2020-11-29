@@ -2,7 +2,7 @@ import { TotalLoans } from './TotalLoans';
 import {
   LoanInformation,
   UserInformation,
-  AgiYearInformation,
+  IncomePlanInformation,
   FilingStatus,
   Rates,
 } from './types';
@@ -25,7 +25,7 @@ import { ICRRepaymentSchedule } from './RepaymentSchedules/ICR';
 export class PSLFCalculator {
   private _userInformation: UserInformation;
 
-  private _incomePlan: AgiYearInformation[];
+  private _incomePlan: IncomePlanInformation[];
 
   private _filingStatus: FilingStatus;
 
@@ -36,7 +36,7 @@ export class PSLFCalculator {
   constructor(
     userInformation: UserInformation,
     loanInformation: LoanInformation[],
-    incomePlan: AgiYearInformation[],
+    incomePlan: IncomePlanInformation[],
     filingStatus: FilingStatus,
   ) {
     try {

@@ -40,7 +40,7 @@ export type UserInformation = {
   spouseLoanInterestRate: number;
 };
 
-export type AgiYearInformation = {
+export type IncomePlanInformation = {
   year: number;
   familySize: number;
   agi: number;
