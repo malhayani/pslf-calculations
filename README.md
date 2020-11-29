@@ -107,13 +107,11 @@ const incomePlan: IncomePlanInformation[] = [
     ... // array must have at least 25 years of data
 ];
 
+// Instantiating PSLFCalculator
 const pslfCalculator = new PSLFCalculator(
     userInformation, 
-    // Array of loans 
     loanInformation,
-    // Array of income plans per year. MUST contain 25 years worth of data
     incomePlan, 
-    // Tax filing status
     filingStatus
 );
 ```
@@ -123,22 +121,22 @@ Payment Plans:
 // Returns an array of numbers representing payments for each of the payment plans
 // i.e. [1000, 1100, 1200, ...] 
 
-// Get Standard Payment Plan
+// Get Standard Payment Plan - returns an array of 10 payments
 const standardPaymentPlan = pslfCalculator.standardPaymentPlan();
 
-// Get REFI Payment Plan
+// Get REFI Payment Plan - returns an array of 20 payments
 const refiPaymentPlan = pslfCalculator.refiPaymentPlan();
 
-// Get PAYE Payment Plan
+// Get PAYE Payment Plan - returns an array of 25 payments
 const payePaymentPlan = pslfCalculator.payePaymentPlan();
 
-// Get REPAYE Payment Plan
+// Get REPAYE Payment Plan - returns an array of 25 payments
 const repayePaymentPlan = pslfCalculator.repayePaymentPlan();
 
-// Get IBR Payment Plan
+// Get IBR Payment Plan - returns an array of 25 payments
 const ibrPaymentPlan = pslfCalculator.ibrPaymentPlan();
 
-// Get ICR Payment Plan
+// Get ICR Payment Plan - returns an array of 25 payments
 const icrPaymentPlan = pslfCalculator.icrPaymentPlan();
 ```
 
@@ -154,22 +152,22 @@ Repayment Schedules:
     ]
 */
 
-// Get Standard Repayment Schedule
+// Get Standard Repayment Schedule - returns repayment plan for 10 years
 const standardRepaymentSchedule = pslfCalculator.standardRepaymentSchedule();
 
-// Get REFI Repayment Schedule
+// Get REFI Repayment Schedule - returns repayment plan for 20 years
 const refiRepaymentSchedule = pslfCalculator.refiRepaymentSchedule();
 
-// Get PAYE Repayment Schedule
+// Get PAYE Repayment Schedule - returns repayment plan for 20 years
 const payeRepaymentSchedule = pslfCalculator.payeRepaymentSchedule();
 
-// Get REPAYE Repayment Schedule
+// Get REPAYE Repayment Schedule - returns repayment plan for 25 years
 const repayeRepaymentSchedule = pslfCalculator.repayeRepaymentSchedule();
 
-// Get IBR Repayment Schedule
+// Get IBR Repayment Schedule - returns repayment plan for 25 years
 const ibrRepaymentSchedule = pslfCalculator.ibrRepaymentSchedule();
 
-// Get ICR Repayment Schedule
+// Get ICR Repayment Schedule - returns repayment plan for 25 years
 const icrRepaymentSchedule = pslfCalculator.icrRepaymentSchedule();
 
 ```

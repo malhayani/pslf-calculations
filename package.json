@@ -15,7 +15,7 @@
     "eslint:fix": "eslint --ext .ts lib/ --fix",
     "test": "npm run format:fix && npm run eslint:fix && npm run jest"
   },
-  "author": "Marlena Alhayani",
+  "author": "Marlena Alhayani <marlena.alhayani@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/mhansen2710/pslfCalculations"
