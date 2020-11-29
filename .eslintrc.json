@@ -1,0 +1,35 @@
+{
+    "env": {
+        "jest/globals": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "import"
+    ],
+    "rules": {
+        "no-underscore-dangle": "off",
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "class-methods-use-this": "off",
+        "import/no-unresolved": "off",
+        "no-plusplus": "off",
+        "no-self-assign": "off",
+        "max-len": [
+            "error",
+            {
+                "code": 250
+            }
+        ]
+    }
+}
