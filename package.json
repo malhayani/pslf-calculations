@@ -1,6 +1,6 @@
 {
   "name": "pslf-calculations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PSLF calculations for the student loan forgiveness program",
   "main": "./lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Marlena Alhayani <marlena.alhayani@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mhansen2710/pslfCalculations"
+    "url": "https://github.com/malhayani/pslfCalculations.git"
   },
   "license": "ISC",
   "dependencies": {
